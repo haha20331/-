@@ -34,7 +34,7 @@ for x in glob.glob(path+'*.csv'):
     
     for name in range(o_x*o_y):
 
-        mask=(data["x"]>=224*(name%o_x)) & (data["x"]<224*(1+name%o_x)) & (data["y"]>=224*(name/o_x))&(data["y"]<224*(1+name/o_x))
+        mask=(data["x"]>=224*(name%o_x)) & (data["x"]<224*(1+name%o_x)) & (data["y"]>=224*(int(name/o_x)))&(data["y"]<224*(1+int(name/o_x)))
     
         ans = pd.DataFrame()
         ans["class"]=0
